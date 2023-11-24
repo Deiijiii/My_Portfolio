@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+
+    <title>My Portfolio</title>
+</head>
+<body>
+    <section style="max-width: 190rem; margin: 0 auto;">
+        <header class="header">
+            <nav class="navbar">
+                <img class="nav-logo" src="./img/logo.png" alt="">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#works" class="nav-link">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#certificates" class="nav-link">Certificates</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+    
+        <section id="home">
+            <div class="main-cont">
+                <div>
+                    <img class="mypic" src="./img/mypic.jpg" alt="">
+                </div>
+    
+                <div>
+                    <h1 style="font-size: 4rem;">Dexter Mangalindan</h1>
+                    <br><br><br>
+                    <h1 style="color: orange; font-size: 3rem;">Ux/UI STUDENT DESIGNER</h1>
+                    <br><br><br>
+                    <p style="font-size: 2rem;">
+                        As UX/Ui designers, we seek to understand what people need, 
+                        <br>
+                        how they think, and why they act the way they do.
+                    </p>
+                    <br><br>
+                    <div>
+                        <button class="btn" style="margin:0 20px 20px 0;">
+                            Contact
+                        </button>
+                        
+                        <button class="btn" style="background-color: skyblue !important; ">
+                            Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+        <!-- About -->
+    
+        <section id="about">
+            <div style="text-align: center;">
+                <h3 style="font-size: 2rem;">Get to know more</h3>
+                <h1 style="font-size: 3rem;">ABOUT ME</h1>
+            </div>
+            <br><br><br><br><br>
+            
+            <div class="huh1">
+                <div>
+                    <img class="pic2nd" src="./img/mypic2nd.jpg" alt="">
+                </div>
+    
+    
+                <div>
+                    <div class="huh">
+                        <div class="kik">
+                           <p>
+                                <img style="height: 40px;" src="./img/badge.png" alt="">
+                                <br>
+                                Experience
+                                3+ years
+                                Information Technology
+                           </p> 
+                        </div>
+                        <br><br>
+                        <div class="kik">
+                            <p>
+                                <img style="height: 40px;" src="./img/audience.png" alt="">
+                                <br>
+                                Education
+                                B.Sc. Bachelors Degree
+                                M.Sc. Masters Degree
+                            </p>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div style="max-width: 600px;">
+                        <p style="font-size: 20px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis reprehenderit et laborum, rem, 
+                            dolore eum quod voluptate exercitationem nobis, nihil esse debitis maxime facere minus sint delectus 
+                            velit in eos quo officiis explicabo deleniti dignissimos. Eligendi illum libero dolorum cum laboriosam 
+                            corrupti quidem, reiciendis ea magnam? Nulla, impedit fuga!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+    
+        <section id="works">
+            <h1 style="text-align: center; margin-bottom: 5rem; font-size: 5rem;">My Works</h1>
+            <div>
+                <div class="hula"> 
+                    <img class="cert" src="./img/works1.png" alt="">
+                    <img class="cert" src="./img/works2.png" alt="">
+                    <img class="cert" src="./img/works3.png" alt="">
+                </div>
+            </div>
+        </section>
+    
+    
+    
+        <section id="certificates">
+            <h1 style="text-align: center; margin-bottom: 5rem; font-size: 5rem;">My Certificates</h1>
+            <div>
+                <div class="hula">
+                    <div class="ju">
+                        <img class="cert1" src="./img/cert1.png" alt="">
+                        <br><br><br><br><br><br>
+                        <h1 style="font-size: 3rem;">Data Structure</h1>
+                    </div>
+                    <div class="ju">
+                        <img class="cert1" src="./img/cert2.png" alt="">
+                        <br><br><br><br><br><br>
+                        <h1 style="font-size: 3rem;">Information Management</h1>
+                    </div>
+                    <div class="ju">
+                        <img class="cert1" src="./img/cert3.png" alt="">
+                        <br><br><br><br><br><br>
+                        <h1 style="font-size: 3rem;">Networking 1</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+        <section id="footer">
+            <footer>
+                <p>
+                    © Copyright 2023, Dexter Mangalindan.
+                </p>
+            </footer>
+        </section>
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+</script>
+
+</body>
+</html>
